@@ -1,0 +1,52 @@
+{
+  "appId": "com.alexevs.code-speak",
+  "productName": "code-speak",
+  "asar": true,
+  "asarUnpack": "**\\*.{node,dll}",
+  "extends": null,
+  "files": [
+    "build",
+    "node_modules",
+    "package.json"
+  ],
+  "mac": {
+    "target": {
+      "target": "default",
+      "arch": [
+        "arm64",
+        "x64"
+      ]
+    },
+    "type": "distribution",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ]
+  },
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "category": "Development"
+  },
+  "directories": {
+    "output": "release"
+  }
+}
